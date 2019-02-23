@@ -136,7 +136,7 @@ if( function_exists('gol_set_callback') ){ // in order to avoid errors if sudden
 }
 ```
 ---
-### GreyOwlLightbox( 'set_content', your_html_content );
+### GreyOwlLightbox( 'set_content' );
 add content to (open) lightbox
 ---
 ### GreyOwlLightbox( 'close' );
