@@ -82,3 +82,42 @@ jQuery('.button-class').GreyOwlLightbox('click', {
     },
 });
 ```
+---
+### callback_ajax
+This event makes an Ajax request, to register the request, in the function.php file use the function gol_set_callback ( 'event_name', 'your_function' );
+### callback_ajax_params
+this event serves to transfer parameters to the php function.
+### before_open
+This event has two parameters:
+1. the first parameter returns the code as a jQuery object
+2. transfer data from the php file to the second parameter of the event using this function "gol_callback_parameters( array() )"
+```javascript
+jQuery('.button-class').GreyOwlLightbox('click', {
+
+    callback_ajax : 'your_example_function_1',
+
+    callback_ajax_params : function(){
+        return { name : 'Your Name', age : 21 };
+    },
+
+    before_open : function( content, params ){
+
+        var returned_value = params.your_key;
+
+        content.find('.inside-element-class').on('click', function(){
+            // your code ...
+        });
+    },
+});
+```
+```php
+if( function_exists('gol_set_callback') ){ // in order to avoid errors if suddenly the plugin will be disabled
+    gol_set_callback( 'your_example_function_1', function( $params ){
+
+        gol_callback_parameters( array( 'your_key' => 'yout value' ) );  // returns data to the second parameter of the "before_open" event
+
+        echo '<p> your name: ' . $params['name'] . '</p>';
+        echo '<p> your age: ' . $params['age'] . '</p>';
+    });
+}
+```
