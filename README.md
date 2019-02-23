@@ -1,6 +1,6 @@
 # jQuery events
 
-image_url: opens image in lightbox
+1. image_url: opens image in lightbox
 
 ```javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
