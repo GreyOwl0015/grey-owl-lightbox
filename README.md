@@ -63,3 +63,22 @@ hides an html element on the page
     <p> Your description: %var_desc% </p>
 </div>
 ```
+```javascript
+jQuery('.button-class').GreyOwlLightbox('click', {
+
+    dom_html_element : 'inside-element-class',
+
+    variables : {
+        1 : 'Example Name',
+        2 : 21,
+        var_desc : 'example text'
+    },
+
+    before_open : function( content ){
+
+        content.find('.inside-element-class p').on('click', function(){
+            jQuery(this).css('color', 'red');
+        });
+    },
+});
+```
