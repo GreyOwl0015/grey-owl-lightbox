@@ -13,6 +13,7 @@ opens images in lightbox gallery
 ### current_img
 current image can also be set
 ```javascript
+#javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     gallery : {
