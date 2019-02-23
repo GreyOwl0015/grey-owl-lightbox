@@ -2,6 +2,8 @@
 ### image_url
 opens image in lightbox
 ```javascript
+// javascript
+
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     image_url : 'https://your.site/image-path/image.jpg'
@@ -13,7 +15,8 @@ opens images in lightbox gallery
 ### current_img
 current image can also be set
 ```javascript
-#javascript
+// javascript
+
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     gallery : {
@@ -30,6 +33,8 @@ opens video in lightbox, returns an embed, works on the basis of a wordpress obj
 ### max_width
 maximum video width
 ```javascript
+// javascript
+
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     embed_url : 'https://www.youtube.com/example_youtube_video',
@@ -58,6 +63,8 @@ replaces variables in html code ( %1%, %example% )
 ### html element attribute [data-gol-content]
 hides an html element on the page
 ```html
+/* html */
+
 <div class="inside-element-class" data-gol-content>
     <p> Your name: %1% </p>
     <p> Your age: %2% </p>
@@ -65,6 +72,8 @@ hides an html element on the page
 </div>
 ```
 ```javascript
+// javascript
+
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     dom_html_element : 'inside-element-class',
@@ -93,6 +102,8 @@ This event has two parameters:
 1. the first parameter returns the code as a jQuery object
 2. transfer data from the php file to the second parameter of the event using this function "gol_callback_parameters( array() )"
 ```javascript
+// javascript
+
 jQuery('.button-class').GreyOwlLightbox('click', {
 
     callback_ajax : 'your_example_function_1',
@@ -112,6 +123,8 @@ jQuery('.button-class').GreyOwlLightbox('click', {
 });
 ```
 ```php
+// php
+
 if( function_exists('gol_set_callback') ){ // in order to avoid errors if suddenly the plugin will be disabled
     gol_set_callback( 'your_example_function_1', function( $params ){
 
