@@ -147,7 +147,9 @@ GreyOwlLightbox( 'set_content', your_html_content );
 ---
 ### GreyOwlLightbox( 'close' );
 close the (open) lightbox
+
 ---
+
 ## Element attributes
 ### go-lightbox
 To activate the html attributes in the button you need to add the attribute “go-lightbox”
