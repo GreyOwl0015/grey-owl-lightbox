@@ -173,6 +173,7 @@ maximum video width
 
 <button go-lightbox data-go-video-url="https://www.example-tube.com/your-video" data-go-video-width="1200"> click me </button>
 ```
+---
 ### data-go-ajax-callback
 Creates the request ajax and returns the data from the function na in the file function.php
 ```html
@@ -180,10 +181,10 @@ Creates the request ajax and returns the data from the function na in the file f
 
 <button go-lightbox data-go-ajax-callback="example_callback_1"> click me </button>
 ```
-```javascript
-// javascript
+```php
+// php
 
 gol_set_callback( 'example_callback_1', function( $params ){
-    // your code ( return or echo )
+    // your html code ( return or echo )
 });
 ```
