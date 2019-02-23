@@ -1,5 +1,5 @@
-# jQuery events
-## image_url : opens image in lightbox
+## jQuery events
+### image_url : opens image in lightbox
 
 ```javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
@@ -8,8 +8,8 @@ jQuery('.button-class').GreyOwlLightbox('click', {
 });
 ```
 
-## gallery : opens images in lightbox gallery
-## current_img : current image can also be set
+### gallery : opens images in lightbox gallery
+### current_img : current image can also be set
 
 ```javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
