@@ -1,3 +1,4 @@
+# Grey Owl Lightbox v.1.1.0
 ## jQuery events
 ### image_url
 opens image in lightbox
