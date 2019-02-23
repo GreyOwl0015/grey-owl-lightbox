@@ -136,8 +136,14 @@ if( function_exists('gol_set_callback') ){ // in order to avoid errors if sudden
 }
 ```
 ---
-### GreyOwlLightbox( 'set_content', your_html_content ); 
+### GreyOwlLightbox( 'set_content', your_html_content );
+add content to (open) lightbox
+```javascript
+// javascript
 
+var your_html_content = '<p>Your demo content</p>';
+GreyOwlLightbox( 'set_content', your_html_content );
+```
 ---
 ### GreyOwlLightbox( 'close' );
 close the (open) lightbox
