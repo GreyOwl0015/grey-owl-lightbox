@@ -1,7 +1,5 @@
 <?php
 
-
-
 add_action( 'gol_page_start', 'gol_page_fields_list_start', 10 );
 function gol_page_fields_list_start(){
     ?>
@@ -235,9 +233,20 @@ if( function_exists('gol_set_callback') ){ // in order to avoid errors if sudden
             </tr>
 
             <tr>
-                <td class="event-name">GreyOwlLightbox( 'set_content' );</td>
+                <td class="event-name">GreyOwlLightbox( 'set_content', your_html_content );</td>
                 <td class="description">
                     <?php esc_html_e('add content to (open) lightbox', 'greyowl'); ?>
+                </td>
+            </tr>
+            <tr>
+                <td class="example-code" colspan="2">
+                    <div class="example-code-wrapper">
+                        <pre class="example-code-box" data-page-type="script.js">
+<code>
+var your_html_content = '&#60;p&#62;Your demo content&#60;/p&#62;';
+GreyOwlLightbox( 'set_content', your_html_content );</code>
+                        </pre>
+                    </div>
                 </td>
             </tr>
             <tr>
