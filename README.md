@@ -1,6 +1,6 @@
 ## jQuery events
-### image_url : opens image in lightbox
-
+### image_url
+opens image in lightbox
 ```javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
 
@@ -8,9 +8,10 @@ jQuery('.button-class').GreyOwlLightbox('click', {
 });
 ```
 ---
-### gallery : opens images in lightbox gallery
-### current_img : current image can also be set
-
+### gallery
+opens images in lightbox gallery
+### current_img
+current image can also be set
 ```javascript
 jQuery('.button-class').GreyOwlLightbox('click', {
 
@@ -20,5 +21,29 @@ jQuery('.button-class').GreyOwlLightbox('click', {
         3 : 'https://your.site/image-path/image-3.jpg',
     },
     current_img : 2
+});
+```
+---
+### embed_url
+opens video in lightbox, returns an embed, works on the basis of a wordpress object
+### max_width
+maximum video width
+```javascript
+jQuery('.button-class').GreyOwlLightbox('click', {
+
+    embed_url : 'https://www.youtube.com/example_youtube_video',
+    max_width : 1200
+});
+
+//-----------------  OR  --------------------//
+
+jQuery('.button-class').on( 'click', function(){
+
+    var this_url = jQuery(this).attr('data-url-video'); // data attribute with video address can be added to the button
+
+    jQuery( this ).GreyOwlLightbox({
+        embed_url : this_url,
+        max_width : 1200
+    });
 });
 ```
