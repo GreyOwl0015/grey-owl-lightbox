@@ -7,7 +7,7 @@ jQuery('.button-class').GreyOwlLightbox('click', {
     image_url : 'https://your.site/image-path/image.jpg'
 });
 ```
-...test..
+-----------------------------------------------------------------------
 ### gallery : opens images in lightbox gallery
 ### current_img : current image can also be set
 
