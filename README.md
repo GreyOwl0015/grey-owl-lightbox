@@ -47,3 +47,19 @@ jQuery('.button-class').on( 'click', function(){
     });
 });
 ```
+---
+### dom_html_element
+opens html element in lightbox (does not copy javascript events)
+### before_open
+This event has one parameter: is parameter returns the code as a jQuery object
+### variables
+replaces variables in html code ( %1%, %example% )
+### html element attribute [data-gol-content]
+hides an html element on the page
+```html
+<div class="inside-element-class" data-gol-content>
+    <p> Your name: %1% </p>
+    <p> Your age: %2% </p>
+    <p> Your description: %var_desc% </p>
+</div>
+```
