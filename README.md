@@ -188,3 +188,26 @@ gol_set_callback( 'example_callback_1', function( $params ){
     // your html code ( return or echo )
 });
 ```
+---
+### data-go-callback-params
+With this attribute, you can pass parameters to the callback function
+```html
+/* html */
+
+<button go-lightbox data-go-ajax-callback="example_callback_2" data-go-callback-params="example_params_2"> click me </button>
+```
+```javascript
+// javascript
+
+function example_params_2(){
+    var obj_params = { param_key : 'param_value' };
+    return obj_params;
+};
+```
+```php
+// php
+
+gol_set_callback( 'example_callback_2', function( $params ){
+    echo $params['param_key'];
+});
+```
