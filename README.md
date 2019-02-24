@@ -1,3 +1,4 @@
+# Grey Owl Lightbox v.1.1.0
 ## jQuery events
 ### image_url
 opens image in lightbox
@@ -147,3 +148,69 @@ GreyOwlLightbox( 'set_content', your_html_content );
 ---
 ### GreyOwlLightbox( 'close' );
 close the (open) lightbox
+
+---
+
+## Element attributes
+### go-lightbox
+To activate the html attributes in the button you need to add the attribute “go-lightbox”
+```html
+/* html */
+
+<button go-lightbox> click me </button>
+```
+---
+### data-go-image
+opens image in lightbox
+```html
+/* html */
+
+<button go-lightbox data-go-image="https://your.site/image-path/image.jpg"> click me </button>
+```
+### data-go-video-url
+opens video in lightbox, returns an embed, works on the basis of a wordpress object
+### data-go-video-widt
+maximum video width
+```html
+/* html */
+
+<button go-lightbox data-go-video-url="https://www.example-tube.com/your-video" data-go-video-width="1200"> click me </button>
+```
+---
+### data-go-ajax-callback
+Creates the request ajax and returns the data from the function na in the file function.php
+```html
+/* html */
+
+<button go-lightbox data-go-ajax-callback="example_callback_1"> click me </button>
+```
+```php
+// php
+
+gol_set_callback( 'example_callback_1', function( $params ){
+    // your html code ( return or echo )
+});
+```
+---
+### data-go-callback-params
+With this attribute, you can pass parameters to the callback function
+```html
+/* html */
+
+<button go-lightbox data-go-ajax-callback="example_callback_2" data-go-callback-params="example_params_2"> click me </button>
+```
+```javascript
+// javascript
+
+function example_params_2(){
+    var obj_params = { param_key : 'param_value' };
+    return obj_params;
+};
+```
+```php
+// php
+
+gol_set_callback( 'example_callback_2', function( $params ){
+    echo $params['param_key'];
+});
+```
