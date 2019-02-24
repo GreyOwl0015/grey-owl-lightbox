@@ -1,5 +1,7 @@
 <?php
 
+
+
 add_action( 'gol_page_start', 'gol_page_fields_list_start', 10 );
 function gol_page_fields_list_start(){
     ?>

@@ -1,6 +1,6 @@
 <?php
 
-function plugin_add_settings_link( $links ) {
+function grey_owl_lightbox_plugin_add_settings_link( $links ) {
 
     $links_array = gol_get_page_links_array();
 
@@ -23,11 +23,11 @@ function grey_owl_lightbox_settings(){
 
         if ( function_exists('check_admin_referer') ) {
             check_admin_referer('grey_owl_lightbox_setup_form');
-        }
-    }
 
-    if( gol_is_settings_page() ){
-        GreyOwllightboxOBJ::save_lightbox_data( $_POST );
+            if( gol_is_settings_page() ){
+                GreyOwllightboxOBJ::save_lightbox_data( $_POST );
+            }
+        }
     }
 
     require_once GOL_MAIN_DIR . 'functions/enqueue-data.php';
